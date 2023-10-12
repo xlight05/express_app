@@ -86,8 +86,8 @@ const instance = axios.create({
   baseURL: "https://api.staging-central.ballerina.io",
 });
 
-axios.defaults.headers.common['Content-Type'] = 'application/json';
-axios.defaults.headers.common['Accept'] = 'application/json';
+// axios.defaults.headers.common['Content-Type'] = 'application/json';
+// axios.defaults.headers.common['Accept'] = 'application/json';
 
 function postReq<T>(
   path: string,
@@ -168,19 +168,19 @@ function createRequestOptions(
     // params: {meow:"hello",hello:"qqq"},
     headers: jwtToken === '' 
     ? {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Accept-Encoding': 'application/json',
+      'Content-Type': 'application/json',
+      // 'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
-      'X-Central-Frontend': true,
-      'X-Lib-Site': true
+      // 'X-Central-Frontend': true,
+      // 'X-Lib-Site': true
     } 
     : {
       Authorization: 'Bearer ' + jwtToken,
-      'Content-Type': 'application/json; charset=utf-8',
-      'Accept-Encoding': 'application/json',
+      'Content-Type': 'application/json',
+      // 'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
-      'X-Central-Frontend': true,
-      'X-Lib-Site': true
+      // 'X-Central-Frontend': true,
+      // 'X-Lib-Site': true
     },
     timeout: 30000, // 30 seconds
     withCredentials: true,
