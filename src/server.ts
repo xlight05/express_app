@@ -171,16 +171,16 @@ function createRequestOptions(
       'Content-Type': 'application/json',
       // 'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
-      // 'X-Central-Frontend': true,
-      // 'X-Lib-Site': true
+      'X-Central-Frontend': true,
+      'X-Lib-Site': true
     } 
     : {
       Authorization: 'Bearer ' + jwtToken,
       'Content-Type': 'application/json',
       // 'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
-      // 'X-Central-Frontend': true,
-      // 'X-Lib-Site': true
+      'X-Central-Frontend': true,
+      'X-Lib-Site': true
     },
     timeout: 30000, // 30 seconds
     withCredentials: true,
