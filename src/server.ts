@@ -169,7 +169,7 @@ function createRequestOptions(
     headers: jwtToken === '' 
     ? {
       'Content-Type': 'application/json',
-      // 'Accept-Encoding': 'application/json',
+      'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
       'X-Central-Frontend': true,
       'X-Lib-Site': true
@@ -177,7 +177,7 @@ function createRequestOptions(
     : {
       Authorization: 'Bearer ' + jwtToken,
       'Content-Type': 'application/json',
-      // 'Accept-Encoding': 'application/json',
+      'Accept-Encoding': 'application/json',
       'Accept': 'application/json',
       'X-Central-Frontend': true,
       'X-Lib-Site': true
